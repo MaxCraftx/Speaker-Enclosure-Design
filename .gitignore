@@ -21,3 +21,8 @@ desktop.ini
 *.swp
 *.swo
 *~
+# Scan and CAD working files
+*.blend1
+*.exs
+*.autosave
+*.cr_scan
