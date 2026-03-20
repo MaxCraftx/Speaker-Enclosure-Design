@@ -194,9 +194,14 @@ def create_cross_section(obj, mesh_info, z_fraction: float):
     """
     Create a cross-section by bisecting the mesh at a Z height.
     Returns the bisected object (upper half removed).
+
+    FIX (eed2aa3e → 36f07765): Blender's bisect operator works in
+    object-local space. We must transform the world-space cut plane
+    through matrix_world.inverted() before passing to bisect.
     """
     z_min, z_max = mesh_info["min"][2], mesh_info["max"][2]
     z_cut = z_min + (z_max - z_min) * z_fraction
+    cx, cy, _ = mesh_info["center"]
 
     # Duplicate the object for sectioning
     bpy.ops.object.select_all(action='DESELECT')
@@ -206,14 +211,20 @@ def create_cross_section(obj, mesh_info, z_fraction: float):
     section_obj = bpy.context.active_object
     section_obj.name = f"Section_{int(z_fraction * 100)}pct"
 
+    # Transform world-space cut plane into object-local space
+    world_point = mathutils.Vector((cx, cy, z_cut))
+    local_point = section_obj.matrix_world.inverted() @ world_point
+    world_normal = mathutils.Vector((0, 0, 1))
+    local_normal = (section_obj.matrix_world.inverted().to_3x3() @ world_normal).normalized()
+
     # Enter edit mode and bisect
     bpy.ops.object.mode_set(mode='EDIT')
     bpy.ops.mesh.select_all(action='SELECT')
 
-    # Bisect: cut at z_cut, clear the upper half
+    # Bisect: cut at z_cut in local space, clear the upper half
     bpy.ops.mesh.bisect(
-        plane_co=(0, 0, z_cut),
-        plane_no=(0, 0, 1),
+        plane_co=(local_point.x, local_point.y, local_point.z),
+        plane_no=(local_normal.x, local_normal.y, local_normal.z),
         clear_outer=True,
         clear_inner=False,
         use_fill=True,
