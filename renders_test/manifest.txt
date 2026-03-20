@@ -1,0 +1,19 @@
+Mesh Render Manifest
+==================================================
+Source: c:\Users\max\.gemini\antigravity\scratch\Speaker-Enclosure-Design\scans_repaired\metal_backcan_decimated.stl
+Vertices: 24,893
+Faces: 49,817
+Bounding Box (mm): 283.4 × 283.1 × 283.5
+Center: (61.6, -21.3, -309.2)
+==================================================
+
+Rendered files:
+  view_front.png
+  view_right.png
+  view_top.png
+  view_iso.png
+  view_bottom.png
+  view_rear.png
+  section_z_25pct.png
+  section_z_50pct.png
+  section_z_75pct.png

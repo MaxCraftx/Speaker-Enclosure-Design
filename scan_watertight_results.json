@@ -1,0 +1,58 @@
+{
+  "metal_backcan": {
+    "original_vertices": 24893,
+    "reconstructed_faces": 49999,
+    "bbox_mm": [
+      282.9,
+      282.9,
+      282.9
+    ],
+    "volume_mm3": 0,
+    "volume_litres": 0.0,
+    "surface_area_mm2": 334956.9,
+    "watertight_path": "C:\\Users\\max\\.gemini\\antigravity\\scratch\\Speaker-Enclosure-Design\\scans_repaired\\metal_backcan_watertight.stl",
+    "decimated_path": "C:\\Users\\max\\.gemini\\antigravity\\scratch\\Speaker-Enclosure-Design\\scans_repaired\\metal_backcan_decimated.stl"
+  },
+  "bassreflex_vent": {
+    "original_vertices": 24996,
+    "reconstructed_faces": 50000,
+    "bbox_mm": [
+      111.0,
+      74.3,
+      119.8
+    ],
+    "volume_mm3": 82519.0,
+    "volume_litres": 0.0825,
+    "surface_area_mm2": 54880.6,
+    "watertight_path": "C:\\Users\\max\\.gemini\\antigravity\\scratch\\Speaker-Enclosure-Design\\scans_repaired\\bassreflex_vent_watertight.stl",
+    "decimated_path": "C:\\Users\\max\\.gemini\\antigravity\\scratch\\Speaker-Enclosure-Design\\scans_repaired\\bassreflex_vent_decimated.stl"
+  },
+  "connector_box": {
+    "original_vertices": 24768,
+    "reconstructed_faces": 50000,
+    "bbox_mm": [
+      156.2,
+      56.1,
+      138.7
+    ],
+    "volume_mm3": 93393.0,
+    "volume_litres": 0.0934,
+    "surface_area_mm2": 55810.8,
+    "watertight_path": "C:\\Users\\max\\.gemini\\antigravity\\scratch\\Speaker-Enclosure-Design\\scans_repaired\\connector_box_watertight.stl",
+    "decimated_path": "C:\\Users\\max\\.gemini\\antigravity\\scratch\\Speaker-Enclosure-Design\\scans_repaired\\connector_box_decimated.stl"
+  },
+  "base_assembly": {
+    "original_vertices": 24381,
+    "reconstructed_faces": 50000,
+    "bbox_mm": [
+      330.4,
+      177.6,
+      330.4
+    ],
+    "volume_mm3": 0,
+    "volume_litres": 0.0,
+    "surface_area_mm2": 491936.9,
+    "watertight_path": "C:\\Users\\max\\.gemini\\antigravity\\scratch\\Speaker-Enclosure-Design\\scans_repaired\\base_assembly_watertight.stl",
+    "decimated_path": "C:\\Users\\max\\.gemini\\antigravity\\scratch\\Speaker-Enclosure-Design\\scans_repaired\\base_assembly_decimated.stl"
+  }
+}

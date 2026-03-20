@@ -1,0 +1,13 @@
+// Test Extrusion for KittyCAD Language Server integration
+const width = 10
+const length = 20
+const height = 5
+
+const mySketch = startSketchOn('XY')
+  |> startProfileAt([0, 0], %)
+  |> line([0, length], %)
+  |> line([width, 0], %)
+  |> line([0, -length], %)
+  |> close(%)
+
+const myExtrusion = extrude(height, mySketch)
